@@ -145,7 +145,7 @@
     <h2>🌙 REST API Service</h2>
     <div class="endpoint-box">
         <p class="endpoint-title">Validate card Endpoint</p>
-        <a class="endpoint-url" href="${baseUrl}/api/validatecard/cardnumber" target="_blank">
+        <a class="endpoint-url" href="${baseUrl}/api/validatecard/cardnumber/4916801905619884" target="_blank">
             ${baseUrl}/api/validatecard/cardnumber
         </a>
         <p class="text-muted">Method: <b>GET</b> — Initiates verify method hereby ProofPoint API.</p>
