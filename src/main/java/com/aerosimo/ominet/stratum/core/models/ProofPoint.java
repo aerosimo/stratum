@@ -55,9 +55,19 @@ public class ProofPoint {
 
         if (CardLongNumber == null || CardLongNumber.isEmpty()) {
             log.error("Schema Validation failed because cardLongNumber is a required field but it is empty {}", CardLongNumber);
+            try {
+                Spectre.recordError("TE-20001", "Schema Validation failed because cardLongNumber is a required field but it is empty " + CardLongNumber, ProofPoint.class.getName());
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
             return new StratumResponseDTO("false", "Unknown", "Card number is empty");
         } else if (CardLongNumber.length() <= 12 || CardLongNumber.length() > 19) {
             log.error("Schema Validation failed because cardLongNumber length is too short or too long {}", CardLongNumber);
+            try {
+                Spectre.recordError("TE-20002", "Schema Validation failed because cardLongNumber length is too short or too long " + CardLongNumber, ProofPoint.class.getName());
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
             return new StratumResponseDTO("false", "Unknown", "Card number is too short or too long");
         } else {
             isValid = String.valueOf(CipherCheck.checkCardNumber(CardLongNumber));
