@@ -101,7 +101,7 @@ The required dependencies are defined in `pom.xml`. Below are the key dependenci
    Start server and access the application:
 
     - SOAP Service: WSDL at `http://localhost:8081/stratum/ws/stratum?wsdl`
-    - REST Service: http://localhost:8081/stratum/api/stratum/validateCard/cardnumber
+    - REST Service: http://localhost:8081/stratum/api/validateCard/cardnumber/{CardLongNumber}
     - Web Interface: `http://localhost:8081/stratum/index.jsp`
 
 ## Detailed Explanation of Components
@@ -110,30 +110,48 @@ The required dependencies are defined in `pom.xml`. Below are the key dependenci
 
 The SOAP web service is implemented in `com.aerosimo.ominet.stratum.api.soap.StratumSOAP.java`.
 
-Example sendMail SOAP Request:
+Example validateCard SOAP Request:
 ```xml
 <?xml version='1.0' encoding='UTF-8'?>
-<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ast="https://aerosimo.com/api/ws/astrology">
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:str="https://aerosimo.com/api/ws/stratum">
     <soap:Header/>
     <soap:Body>
-        <ast:sendEmail />
+        <str:validateCard>
+            <CardLongNumber>4916801905619884</CardLongNumber>
+        </str:validateCard>
+    </soap:Body>
+</soap:Envelope>
+```
+Example validateCard SOAP Response:
+```xml
+<?xml version='1.0' encoding='UTF-8'?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Body>
+        <str:validateCardResponse xmlns:str="https://aerosimo.com/api/ws/stratum">
+            <cardNetwork>
+                <valid>true</valid>
+                <cardType>Visa</cardType>
+                <message>Card is valid</message>
+            </cardNetwork>
+        </str:validateCardResponse>
     </soap:Body>
 </soap:Envelope>
 ```
 ### 2. **REST Web Service** (JAX-RS)
 
-The REST web service is implemented in `com.aerosimo.ominet.astrology.api.rest.AstrologyREST.java`.
+The REST web service is implemented in `com.aerosimo.ominet.stratum.api.rest.StratumREST.java`.
 
-Example horoscope REST Request:
+Example validateCard REST Request:
 ```curl
-POST http://localhost:8081/astrology/api/astrology/horoscope
+GET http://ominet.aerosimo.com:8081/stratum/api/validatecard/cardnumber/4916801905619884
 
 ```
-Example sendMail REST Response:
+Example validateCard REST Response:
 ```json
     {
-      "status": "success",
-      "message": "Daily horoscope update initiated."
+      "valid": "true",
+      "cardType": "Visa",
+      "message": "Card is valid"
     }
 ```
 

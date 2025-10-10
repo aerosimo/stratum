@@ -145,13 +145,13 @@
     <h2>🌙 REST API Service</h2>
     <div class="endpoint-box">
         <p class="endpoint-title">Validate card Endpoint</p>
-        <a class="endpoint-url" href="${baseUrl}/api/stratum/validatecard/cardnumber" target="_blank">
-            ${baseUrl}/api/stratum/validatecard/cardnumber
+        <a class="endpoint-url" href="${baseUrl}/api/validatecard/cardnumber" target="_blank">
+            ${baseUrl}/api/validatecard/cardnumber
         </a>
         <p class="text-muted">Method: <b>GET</b> — Initiates verify method hereby ProofPoint API.</p>
         <p class="text-muted">Example (cURL):</p>
         <pre style="background:#eee;padding:10px;border-radius:8px;overflow-x:auto;">
-curl -X GET ${baseUrl}/api/stratum/validatecard/4916801905619884 \
+curl -X GET ${baseUrl}/api/validatecard/cardnumber/4916801905619884 \
      -H "Content-Type: application/json"
         </pre>
     </div>
