@@ -1,4 +1,4 @@
-![MIT License](/img/MIT.png "MIT")
+![MIT License](/src/main/webapp/assets/img/MIT.png "MIT")
 
 <details>
   <summary>License</summary>
@@ -34,7 +34,7 @@ Any reliance you place on such information is therefore strictly at your own ris
 
 ---
 
-![Project Cover](/img/cover.jpg "Astrology")
+![Project Cover](/src/main/webapp/assets/img/cover.jpg "Astrology")
 # Stratum
 > *Reflects the layered rules behind card number generation. Validating a credit card refers to the process of running a computer algorithm
 > that performs calculations using a credit card's number.
@@ -57,7 +57,7 @@ This `README.md` gives an overview of the project structure and instructions on 
 
 ## Getting Started
 
-![Project Codes & Tasks](/img/code.jpg "Project Codes and Task")
+![Project Codes & Tasks](/src/main/webapp/assets/img/code.jpg "Project Codes and Task")
 
 ---
 
@@ -100,7 +100,7 @@ The required dependencies are defined in `pom.xml`. Below are the key dependenci
 
    Start server and access the application:
 
-    - SOAP Service: WSDL at `http://localhost:8081/stratum/ws/stratum?wsdl`
+    - SOAP Service: WSDL at `http://localhost:8081/stratum/ws/validatecard?wsdl`
     - REST Service: http://localhost:8081/stratum/api/validateCard/cardnumber/{CardLongNumber}
     - Web Interface: `http://localhost:8081/stratum/index.jsp`
 
@@ -162,4 +162,4 @@ We welcome feedback and contributions. Please open an issue or submit a pull req
 
 ```
 
-![Aerosimo Logo](/img/logo.png "Aerosimo")
+![Aerosimo Logo](/src/main/webapp/assets/img/logo.png "Aerosimo")

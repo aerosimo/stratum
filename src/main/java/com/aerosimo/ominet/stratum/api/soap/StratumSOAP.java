@@ -43,22 +43,27 @@ import jakarta.xml.ws.soap.SOAPBinding;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@WebService(name = "stratum", serviceName = "stratum",
-        portName = "stratumPort", targetNamespace = "https://aerosimo.com/api/ws/stratum")
+/**
+ * SOAP endpoint for card validation.
+ */
+@WebService(
+        name = "ValidateCardService",
+        serviceName = "ValidateCardService",
+        portName = "ValidateCardPort",
+        targetNamespace = "https://aerosimo.com/api/ws"
+)
 @BindingType(SOAPBinding.SOAP12HTTP_BINDING)
 public class StratumSOAP {
 
-    private static final Logger log;
-
-    static {
-        log = LogManager.getLogger(StratumSOAP.class.getName());
-    }
+    private static final Logger log = LogManager.getLogger(StratumSOAP.class);
 
     @WebMethod(operationName = "validateCard")
     @WebResult(name = "cardNetwork", partName = "stratumResponse")
-    public StratumResponseDTO validateCard(@XmlElement(required = true) @WebParam(name = "CardLongNumber",
-            partName = "stratumRequest") String CardLongNumber) {
-
+    public StratumResponseDTO validateCard(
+            @XmlElement(required = true)
+            @WebParam(name = "CardLongNumber", partName = "stratumRequest") String CardLongNumber
+    ) {
+        log.info("Validating card number: {}", CardLongNumber);
         return ProofPoint.verify(CardLongNumber.replaceAll("-", ""));
     }
 }

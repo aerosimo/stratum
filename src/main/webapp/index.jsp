@@ -135,7 +135,7 @@
     <h2>🔮 SOAP Web Service</h2>
     <div class="endpoint-box">
         <p class="endpoint-title">Stratum SOAP Service (WSDL)</p>
-        <a class="endpoint-url" href="${baseUrl}/ws/stratum?wsdl" target="_blank">
+        <a class="endpoint-url" href="${baseUrl}/ws/validatecard?wsdl" target="_blank">
             ${baseUrl}/ws/stratum?wsdl
         </a>
         <p class="text-muted">Use this WSDL in your SOAP client to invoke stratum operations.</p>
