@@ -31,6 +31,7 @@
 
 package com.aerosimo.ominet.stratum.dao.impl;
 
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -38,8 +39,11 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(propOrder = {"valid", "cardType", "message"})
 public class StratumResponseDTO {
 
+    @XmlElement
     private String valid;
+    @XmlElement
     private String cardType;
+    @XmlElement
     private String message;
 
     public StratumResponseDTO() {
@@ -63,7 +67,7 @@ public class StratumResponseDTO {
         return cardType;
     }
 
-    public void setCardType() {
+    public void setCardType(String cardType) {
         this.cardType = cardType;
     }
 
