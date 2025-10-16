@@ -63,7 +63,7 @@ public class StratumResponseDTO {
         return cardType;
     }
 
-    public void setCardType(String cardType) {
+    public void setCardType() {
         this.cardType = cardType;
     }
 

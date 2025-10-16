@@ -143,7 +143,7 @@ The REST web service is implemented in `com.aerosimo.ominet.stratum.api.rest.Str
 
 Example validateCard REST Request:
 ```curl
-GET http://ominet.aerosimo.com:8081/stratum/api/validatecard/cardnumber/4916801905619884
+GET http://localhost:8081/stratum/api/validatecard/cardnumber/4916801905619884
 
 ```
 Example validateCard REST Response:
