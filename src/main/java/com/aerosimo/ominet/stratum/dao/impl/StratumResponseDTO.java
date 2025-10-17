@@ -31,12 +31,11 @@
 
 package com.aerosimo.ominet.stratum.dao.impl;
 
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.*;
 
 @XmlRootElement(name = "CardResponse")
 @XmlType(propOrder = {"valid", "cardType", "message"})
+@XmlAccessorType(XmlAccessType.FIELD)
 public class StratumResponseDTO {
 
     @XmlElement
