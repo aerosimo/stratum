@@ -2,9 +2,9 @@
  * This piece of work is to enhance stratum project functionality.            *
  *                                                                            *
  * Author:    eomisore                                                        *
- * File:      CipherCheck.java                                            *
- * Created:   09/10/2025, 22:31                                               *
- * Modified:  09/10/2025, 22:31                                               *
+ * File:      CipherCheck.java                                                *
+ * Created:   17/10/2025, 09:14                                               *
+ * Modified:  17/10/2025, 09:14                                               *
  *                                                                            *
  * Copyright (c)  2025.  Aerosimo Ltd                                         *
  *                                                                            *

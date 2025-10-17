@@ -2,9 +2,9 @@
  * This piece of work is to enhance stratum project functionality.            *
  *                                                                            *
  * Author:    eomisore                                                        *
- * File:      ProofPoint.java                                               *
- * Created:   09/10/2025, 22:44                                               *
- * Modified:  09/10/2025, 22:44                                               *
+ * File:      ProofPoint.java                                                 *
+ * Created:   17/10/2025, 09:15                                               *
+ * Modified:  17/10/2025, 09:15                                               *
  *                                                                            *
  * Copyright (c)  2025.  Aerosimo Ltd                                         *
  *                                                                            *

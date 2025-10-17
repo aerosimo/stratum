@@ -2,9 +2,9 @@
  * This piece of work is to enhance stratum project functionality.            *
  *                                                                            *
  * Author:    eomisore                                                        *
- * File:      StratumResponseDTO.java                                            *
- * Created:   09/10/2025, 22:41                                               *
- * Modified:  09/10/2025, 22:41                                               *
+ * File:      StratumResponseDTO.java                                         *
+ * Created:   17/10/2025, 09:16                                               *
+ * Modified:  17/10/2025, 09:16                                               *
  *                                                                            *
  * Copyright (c)  2025.  Aerosimo Ltd                                         *
  *                                                                            *
