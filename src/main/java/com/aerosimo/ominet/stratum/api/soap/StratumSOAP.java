@@ -50,7 +50,7 @@ import org.apache.logging.log4j.Logger;
         name = "ValidateCardService",
         serviceName = "ValidateCardService",
         portName = "ValidateCardPort",
-        targetNamespace = "https://aerosimo.com/api/ws"
+        targetNamespace = "https://aerosimo.com/ws"
 )
 @BindingType(SOAPBinding.SOAP12HTTP_BINDING)
 public class StratumSOAP {
